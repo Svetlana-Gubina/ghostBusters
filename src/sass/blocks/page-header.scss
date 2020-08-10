@@ -1,0 +1,43 @@
+.page-header {
+  position: relative;
+  @include mainBlock;
+  @include flex();
+  padding: 15px 30px;
+}
+
+.pag-header__logo {
+  display: block;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+  color: $blue-color;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.page-header__nav {
+  @include mainBlock;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  @include indent();
+  padding: 130px;
+  @include flex();
+  background-color: $blue-color;
+}
+
+.page-header__search-form {
+  outline: 2px dashed maroon;
+  max-width: 30px;
+  max-height: 30px;
+  @include indent;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.page-header__search-form input {
+  max-width: 100%;
+  min-height: 100%;
+  border: 0 none;
+  box-shadow: none;
+}

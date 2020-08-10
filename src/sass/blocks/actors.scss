@@ -1,0 +1,37 @@
+.actors {
+  @include mainBlock();
+}
+
+.actors__list {
+  @include indent();
+  @include list();
+  @include flex();
+}
+
+.actors__item {
+  @include indent();
+}
+
+.actors__link {
+  display: block;
+  padding: 2em;
+  text-decoration: none;
+  color: $blue-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.actors__name--eng {
+  color: $grey-color;
+}
+
+.actors__img {
+  border-radius: 50%;
+}

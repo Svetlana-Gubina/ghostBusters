@@ -1,0 +1,25 @@
+.user-nav {
+  @include indent;
+  @include list();
+  padding-top: 50px;
+}
+
+.user-nav__item {
+  @include indent;
+}
+
+.user-nav__link {
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

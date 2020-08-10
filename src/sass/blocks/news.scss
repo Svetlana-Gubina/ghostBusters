@@ -1,0 +1,30 @@
+.news {
+  // @include mainBlock();
+  @include indent();
+}
+
+.news__list {
+  @include indent();
+  @include list();
+  @include flex();
+  flex-direction: column;
+}
+
+.news__item {
+  @include indent();
+
+  max-width: 25%;
+}
+
+.news__date {
+  @include indent();
+  padding: 0.5em;
+}
+
+.news__link {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  color: #000000;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+  height: auto;
+  @include mainBlock();
+  max-width: $desktop-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-tablet {
+    // width: 500px;
+  }
+}
