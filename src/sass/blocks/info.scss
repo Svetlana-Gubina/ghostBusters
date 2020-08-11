@@ -1,25 +1,70 @@
 .info {
   @include mainBlock();
+  padding: 25px 20px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.info__poster {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+  min-height: 412px;
+  border-radius: 5px 5px 0px 0px;
+  margin-bottom: 30px;
+  background-color: lightblue;
 }
 
 .info__title {
   @include indent();
+  // padding: 0.2em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+
+  color: $dark-color;
 }
 
 .info__title--eng {
   @include indent();
   padding: 0.5em;
+  margin-bottom: 10px;
   color: $grey-color;
 }
 
 .info__title-text {
   @include indent();
   @include flex();
-  padding: 0.5em;
+  padding: 0.5em 0;
+  margin-bottom: 40px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
 }
 
 .info__table {
-  padding: 1em;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align-last: left;
+  margin-bottom: 40px;
+}
+
+.info__table th {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $dark-color;
+  padding: 0.8em;
+}
+
+.info__table td {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $dark-color;
+  padding: 0.8em;
 }
 
 .info__rating {
@@ -27,8 +72,51 @@
   @include flex();
 }
 
+.info__rating-data {
+  @include indent();
+  padding-left: 5%;
+  padding-right: 1em;
+  @include flex();
+  flex: auto;
+  flex-direction: column;
+}
+
 .info__rating-percent {
   @include indent();
+  padding: 1em;
   @include flex();
+  justify-content: center;
+  align-items: center;
   color: $blue-color;
+  border: 1px solid $blue-color;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.info__rating-title {
+  @include indent();
+  padding: 0.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $dark-color;
+}
+
+.info__rating-table {
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align-last: left;
+}
+
+.info__rating-table th {
+  font-weight: normal;
+  padding: 0.2em;
+}
+
+.info__rating-table td {
+  font-weight: bold;
+  padding: 0.2em;
 }

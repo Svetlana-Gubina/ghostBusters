@@ -18,6 +18,7 @@
         <form class="page-header__search-form" action="#" method="get">
           <label>
             <input
+              class="page-header__search"
               type="search"
               name="search"
               id="filmSearch"
@@ -71,45 +72,54 @@
 
           <table class="info__table">
             <tr>
-              <td>Режиссер</td>
+              <th>Режиссер</th>
               <td>Джейсон Райтман</td>
-              <td>Бюджет</td>
+            </tr>
+            <tr>
+              <th>Бюджет</th>
               <td>1 000 000 $</td>
             </tr>
             <tr>
-              <td>Сценарий</td>
+              <th>Сценарий</th>
               <td>Дэн Эйкройд</td>
-              <td>Кинопрокат</td>
+            </tr>
+            <tr>
+              <th>Кинопрокат</th>
               <td>SPPR</td>
             </tr>
             <tr>
-              <td>Премьера</td>
+              <th>Премьера</th>
               <td>09.07.2020 (РФ)</td>
-              <td>Премьера</td>
+            </tr>
+            <tr>
+              <th>Премьера</th>
               <td>09.07.2020 (РФ)</td>
             </tr>
           </table>
 
           <div class="info__rating">
             <div class="info__rating-percent">92%</div>
-            <p class="info__rating-title">Рейтинг зрителей</p>
-            <table class="info__rating-table">
-              <tr>
-                <td>Средняя оценка:</td>
-                <td>4,5/5</td>
-              </tr>
-              <tr>
-                <td>Всего голосов:</td>
-                <td>4 350</td>
-              </tr>
-            </table>
+            <div class="info__rating-data">
+              <p class="info__rating-title">Рейтинг зрителей</p>
+              <table class="info__rating-table">
+                <tr>
+                  <th>Средняя оценка:</th>
+                  <td>4,5/5</td>
+                </tr>
+                <tr>
+                  <th>Всего голосов:</th>
+                  <td>4 350</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </section>
         <section class="actors">
-          <h2 class="actors">Актеры <span>Создатели</span></h2>
+          <h2 class="actors__title">Актеры <span>Создатели</span></h2>
           <ul class="actors__list">
             <li class="actors__item">
               <a href="#" class="actors__link">
+                <div class="actors__img"></div>
                 <p class="actors__name">
                   Кэрри Кун
                   <span class="actors__name--eng">Carrie Coon</span>
@@ -118,6 +128,7 @@
             </li>
             <li class="actors__item">
               <a href="#" class="actors__link">
+                <div class="actors__img"></div>
                 <p class="actors__name">
                   Билл Мюррей <span class="actors__name--eng">Bill Murray</span>
                 </p>
@@ -144,7 +155,7 @@
                 <div class="actors__img"></div>
                 <p class="actors__name">
                   МакКенна Грейс
-                  <span class="actors__name--eng">Mckenna GraceФинн Вулфард</span>
+                  <span class="actors__name--eng">Mckenna Grace</span>
                 </p>
               </a>
             </li>
@@ -180,7 +191,9 @@
       </main>
       <section class="news">
         <h2 class="news__title">Новости по теме</h2>
-        <ul class="news__list">
+        <div class="new__wrapper">
+          <button class="new__btn" type="button"></button>
+          <ul class="news__list">
           <li class="news__item">
             <p class="news__date">31 марта 2020</p>
             <a href="#" class="news__link">«Морбиуса» и «Охотников за привидениями» перенесли на следующий
@@ -200,6 +213,7 @@
             <a href="#" class="news__link">Завершились съёмки новых «Охотников за привидениями»</a>
           </li>
         </ul>
+      </div>
       </section>
     </div>
     <script src="js/main.min.js"></script>

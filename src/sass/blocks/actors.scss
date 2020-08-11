@@ -1,37 +1,69 @@
 .actors {
   @include mainBlock();
+  padding: 50px 20px;
+}
+
+.actors__title {
+  @include indent();
+  padding: 0.5em;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+
+  & span {
+    color: #a5a5a5;
+    padding-left: 1em;
+  }
 }
 
 .actors__list {
   @include indent();
   @include list();
   @include flex();
+  flex-direction: column;
 }
 
 .actors__item {
   @include indent();
+  margin-bottom: 10px;
 }
 
 .actors__link {
-  display: block;
-  padding: 2em;
+  @include flex();
+  @include indent();
+  padding: 0.5em;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   color: $blue-color;
 
-  &:hover,
-  &:focus {
+  &:hover .actors__name,
+  &:focus .actors__name {
     opacity: 0.5;
   }
 
-  &:active {
+  &:active .actors__name {
     opacity: 0.8;
   }
 }
 
-.actors__name--eng {
-  color: $grey-color;
+.actors__img {
+  @include indent();
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: lightblue;
 }
 
-.actors__img {
-  border-radius: 50%;
+.actors__name {
+  @include flex();
+  flex: auto;
+  flex-direction: column;
+
+  & .actors__name--eng {
+    color: $grey-color;
+  }
 }
