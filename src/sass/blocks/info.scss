@@ -3,16 +3,27 @@
   padding: 25px 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid #d4d4d4;
+
+  @include media-tablet {
+    background-color: lemonchiffon;
+    padding: 80px 150px;
+  }
 }
 
 .info__poster {
   @include indent();
   width: 100%;
-  max-width: 100%;
+  max-width: 358px;
   min-height: 412px;
   border-radius: 5px 5px 0px 0px;
   margin-bottom: 30px;
   background-color: lightblue;
+
+  @include media-tablet {
+    min-height: 538px;
+    // float: left;
+    // margin-right: 60px;
+  }
 }
 
 .info__title {
@@ -24,6 +35,9 @@
   text-align: left;
 
   color: $dark-color;
+
+  @include media-tablet {
+  }
 }
 
 .info__title--eng {

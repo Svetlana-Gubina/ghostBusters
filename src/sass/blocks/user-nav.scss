@@ -2,6 +2,13 @@
   @include indent;
   @include list();
   padding-top: 50px;
+
+  @include media-tablet {
+    @include flex();
+    justify-content: space-between;
+    @include indent;
+    border-left: 1px solid #d4d4d4;
+  }
 }
 
 .user-nav__item {
@@ -21,5 +28,24 @@
 
   &:active {
     opacity: 0.8;
+  }
+
+  @include media-tablet {
+    color: $dark-color;
+    padding: 30px;
+  }
+}
+
+.user-nav__link--reg {
+  @include media-tablet {
+    color: $blue-color;
+    background-color: #ffffff;
+  }
+}
+
+.user-nav__link--login {
+  @include media-tablet {
+    color: #ffffff;
+    background-color: $blue-color;
   }
 }

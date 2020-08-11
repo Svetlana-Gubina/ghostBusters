@@ -21,3 +21,12 @@
   max-width: 100%;
   min-width: $mobile-width;
 }
+
+@mixin placeholderShown() {
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+}
