@@ -3,9 +3,9 @@
   padding: 25px 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid #d4d4d4;
+  @include flex();
 
-  @include media-tablet {
-    background-color: lemonchiffon;
+  @include media-desktop {
     padding: 80px 150px;
   }
 }
@@ -13,22 +13,42 @@
 .info__poster {
   @include indent();
   width: 100%;
-  max-width: 358px;
+  max-width: 319px;
   min-height: 412px;
   border-radius: 5px 5px 0px 0px;
   margin-bottom: 30px;
   background-color: lightblue;
 
   @include media-tablet {
+    max-width: 358px;
     min-height: 538px;
-    // float: left;
-    // margin-right: 60px;
+  }
+
+  @include media-custom(900px) {
+    margin-right: 20px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+    margin-right: 60px;
+    margin-right: 5%;
+    margin-left: 0;
+  }
+}
+
+.info__container {
+  @include indent();
+  @include flex();
+  flex-direction: column;
+
+  @include media-desktop {
+    max-width: 60%;
   }
 }
 
 .info__title {
   @include indent();
-  // padding: 0.2em;
+  padding: 0.2em;
   font-weight: 900;
   font-size: 20px;
   line-height: 23px;
@@ -88,16 +108,13 @@
 
 .info__rating-data {
   @include indent();
-  padding-left: 5%;
-  padding-right: 1em;
-  @include flex();
-  flex: auto;
-  flex-direction: column;
 }
 
 .info__rating-percent {
   @include indent();
-  padding: 1em;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
   @include flex();
   justify-content: center;
   align-items: center;
@@ -112,7 +129,6 @@
 .info__rating-title {
   @include indent();
   padding: 0.5em;
-  margin-bottom: 10px;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;

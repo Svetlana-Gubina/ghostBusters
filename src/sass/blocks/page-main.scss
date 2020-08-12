@@ -1,3 +1,4 @@
 .page-main {
   @include mainBlock();
+  outline: 3px dashed black;
 }
