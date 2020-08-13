@@ -1,6 +1,14 @@
 .actors {
   @include mainBlock();
   padding: 50px 20px;
+
+  @include media-tablet {
+    padding: 50px;
+  }
+
+  @include media-desktop {
+    padding: 80px 150px;
+  }
 }
 
 .actors__title {
@@ -23,11 +31,30 @@
   @include list();
   @include flex();
   flex-direction: column;
+
+  @include media-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include media-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .actors__item {
   @include indent();
   margin-bottom: 10px;
+
+  @include media-tablet {
+    flex-basis: 230px;
+    flex: auto;
+  }
+
+  @include media-desktop {
+    width: 25%;
+  }
 }
 
 .actors__link {
@@ -56,6 +83,10 @@
   height: 60px;
   border-radius: 50%;
   background-color: lightblue;
+}
+
+.actors__img img {
+  object-fit: cover;
 }
 
 .actors__name {

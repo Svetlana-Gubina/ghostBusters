@@ -2,7 +2,8 @@
   position: relative;
   @include mainBlock;
   @include flex();
-  padding: 15px 30px;
+  padding: 15px 25px;
+  padding-bottom: 0;
   border-bottom: 1px solid #d4d4d4;
 
   @include media-tablet {
@@ -35,6 +36,7 @@
   left: 0;
   @include indent();
   padding: 130px;
+  padding-top: 110px;
   @include flex();
   background-color: $blue-color;
 
@@ -48,7 +50,6 @@
 }
 
 .page-header__search-form {
-  outline: 2px dashed maroon;
   max-width: 30px;
   max-height: 30px;
   @include indent;
@@ -72,10 +73,17 @@
   border: 0 none;
   box-shadow: none;
   @include indent;
+  background-image: url("../../img/search-input.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 
   @include media-tablet {
     padding: 0.5em;
+    padding-left: 2em;
     max-height: 30px;
+    background-image: url("../../img/search-input.svg");
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
   }
 }
 
