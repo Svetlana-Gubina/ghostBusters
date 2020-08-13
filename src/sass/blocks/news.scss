@@ -2,6 +2,7 @@
   @include mainBlock();
   background: #f3f3f3;
   padding: 50px 20px;
+  padding-top: 40px;
 
   @include media-tablet {
     padding: 50px;
@@ -12,12 +13,22 @@
   }
 }
 
+.news__title {
+  @include indent();
+  padding: 0.5em 0;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
 .new__wrapper {
   position: relative;
   @include indent();
   width: 350px;
   max-width: 100%;
-  outline: 2px dashed red;
   overflow: hidden;
 
   &::after {
@@ -41,8 +52,8 @@
 
 .new__btn {
   position: absolute;
-  right: 0;
-  top: 45%;
+  right: 15px;
+  top: 47%;
   z-index: 10;
   width: 25px;
   height: 21.72px;
@@ -91,15 +102,23 @@
 
 .news__date {
   @include indent();
-  padding: 0.5em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-bottom: 10px;
 }
 
 .news__link {
   display: block;
   text-decoration: none;
-  padding: 0.5em;
+  padding: 0.4em 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
   color: #000000;
-  font-weight: bold;
 
   &:hover,
   &:focus {

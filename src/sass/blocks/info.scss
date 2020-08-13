@@ -1,7 +1,7 @@
 .info {
   @include mainBlock();
   padding: 25px 20px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   border-bottom: 1px solid #d4d4d4;
   @include flex();
 
@@ -219,10 +219,10 @@
 
 .info__rating-table th {
   font-weight: normal;
-  padding: 0.2em;
+  padding: 0.1em;
 }
 
 .info__rating-table td {
   font-weight: bold;
-  padding: 0.2em;
+  padding: 0.1em;
 }
