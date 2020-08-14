@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  @include mainBlock;
+  @include mainBlock();
   @include flex();
   padding: 15px 25px;
   padding-bottom: 0;
@@ -8,7 +8,7 @@
 
   @include media-tablet {
     justify-content: space-between;
-    @include indent;
+    @include indent();
   }
 }
 
@@ -22,15 +22,18 @@
   margin-bottom: 20px;
 
   @include media-tablet {
-    @include indent;
-    padding: 30px;
-    padding-bottom: 20px;
+    @include indent();
+    padding: 0 35px;
+    padding-left: 30px;
+    @include flex();
+    justify-content: center;
+    align-items: center;
     border-right: 1px solid #d4d4d4;
   }
 }
 
 .page-header__nav {
-  @include mainBlock;
+  @include mainBlock();
   position: absolute;
   top: 100%;
   left: 0;
@@ -44,26 +47,25 @@
     position: static;
     background-color: transparent;
     width: auto;
-    @include indent;
     margin-left: auto;
+    @include indent();
   }
 }
 
 .page-header__search-form {
   max-width: 30px;
   max-height: 30px;
-  @include indent;
+  @include indent();
   margin-right: 10px;
   margin-left: auto;
 
   @include media-tablet {
     width: 25%;
     max-width: 215px;
-    margin-left: 20px;
-    @include indent;
+    @include indent();
     margin-right: auto;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-left: 40px;
+    margin-top: 38px;
   }
 }
 

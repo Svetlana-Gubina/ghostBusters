@@ -10,6 +10,7 @@
 
   @include media-desktop {
     padding: 80px 150px;
+    padding-top: 60px;
   }
 }
 
@@ -22,6 +23,12 @@
   font-size: 20px;
   line-height: 23px;
   color: #000000;
+
+  @include media-desktop {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
 }
 
 .new__wrapper {
@@ -97,6 +104,8 @@
 
   @include media-desktop {
     margin-bottom: 0;
+    padding: 30px;
+    padding-top: 35px;
   }
 }
 
