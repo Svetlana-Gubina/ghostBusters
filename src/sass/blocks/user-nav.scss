@@ -9,6 +9,12 @@
   @include media-tablet() {
     flex-direction: row;
     @include indent();
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include media-desktop() {
+    @include indent();
     border-left: 1px solid #d4d4d4;
   }
 }

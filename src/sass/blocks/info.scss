@@ -103,6 +103,7 @@
 .info__title {
   @include indent();
   padding: 0.2em;
+  font-style: normal;
   font-weight: 900;
   font-size: 20px;
   line-height: 23px;
@@ -111,8 +112,13 @@
   color: $dark-color;
 
   @include media-tablet {
-    font-style: normal;
-    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.5;
+    @include indent();
+    margin-bottom: 10px;
+  }
+
+  @include media-desktop() {
     font-size: 36px;
     line-height: 42px;
     @include indent();
@@ -129,11 +135,16 @@
   line-height: 1.5;
 
   @include media-tablet {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 1.5;
     @include indent();
     padding: 0.5em;
     margin-bottom: 15px;
+  }
+
+  @include media-desktop() {
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 
@@ -148,7 +159,7 @@
   line-height: 1.5;
   color: #000000;
 
-  @include media-tablet {
+  @include media-desktop() {
     max-width: 80%;
     margin-bottom: 40px;
   }
@@ -162,8 +173,11 @@
   max-width: 100%;
   margin-bottom: 25px;
 
-  @include media-tablet {
+  @include media-custom(750px) {
     flex-direction: row;
+  }
+
+  @include media-desktop() {
     max-width: 85%;
     margin-bottom: 40px;
   }

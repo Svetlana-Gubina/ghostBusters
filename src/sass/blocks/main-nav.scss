@@ -1,6 +1,10 @@
 .main-nav {
   @include indent();
   @include flex();
+
+  @include media-tablet() {
+    flex-grow: 1;
+  }
 }
 
 .main-nav--list {
@@ -27,6 +31,8 @@
     flex-direction: row;
     align-items: center;
     @include indent();
+    width: 100%;
+    justify-content: space-between;
 
     &::after {
       display: none;

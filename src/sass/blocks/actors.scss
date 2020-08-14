@@ -3,11 +3,11 @@
   padding: 50px 20px;
   padding-top: 70px;
 
-  @include media-tablet {
+  @include media-tablet() {
     padding: 50px;
   }
 
-  @include media-desktop {
+  @include media-desktop() {
     padding: 80px 150px;
     padding-top: 60px;
   }
@@ -26,7 +26,7 @@
     padding-left: 1em;
   }
 
-  @include media-desktop {
+  @include media-desktop() {
     font-size: 24px;
     line-height: 28px;
     @include indent();
@@ -41,12 +41,12 @@
   @include flex();
   flex-direction: column;
 
-  @include media-tablet {
+  @include media-tablet() {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @include media-desktop {
+  @include media-desktop() {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -55,12 +55,12 @@
 .actors__item {
   @include indent();
 
-  @include media-tablet {
+  @include media-tablet() {
     flex-basis: 230px;
     flex: auto;
   }
 
-  @include media-desktop {
+  @include media-desktop() {
     width: 25%;
     padding-left: 15px;
     margin-bottom: 10px;
@@ -94,7 +94,12 @@
   border-radius: 50%;
   background-color: lightblue;
 
-  @include media-desktop {
+  @include media-tablet() {
+    width: 80px;
+    height: 80px;
+  }
+
+  @include media-desktop() {
     width: 100px;
     height: 100px;
   }
@@ -103,7 +108,7 @@
 .actors__img img {
   object-fit: cover;
 
-  @include media-desktop() {
+  @include media-tablet() {
     width: 100%;
     height: 100%;
   }
