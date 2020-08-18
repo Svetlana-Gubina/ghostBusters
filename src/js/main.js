@@ -14,6 +14,21 @@
       menu.classList.add("visually-hidden");
       toggle.classList.remove("visually-hidden");
       form.classList.add("modal");
+      var mySwiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".new__btn-next",
+          prevEl: ".new__btn-prev",
+        },
+      });
     } else {
       menu.classList.remove("visually-hidden");
       toggle.classList.add("visually-hidden");

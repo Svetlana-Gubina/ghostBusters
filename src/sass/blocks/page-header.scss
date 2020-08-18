@@ -1,5 +1,8 @@
 .page-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
   @include mainBlock();
   @include flex();
   padding: 15px 25px;
@@ -7,6 +10,7 @@
   border-bottom: 1px solid #d4d4d4;
 
   @include media-tablet() {
+    position: relative;
     justify-content: space-between;
     @include indent();
   }

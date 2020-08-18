@@ -10,6 +10,11 @@
     />
     <link rel="stylesheet" href="css/normalize.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -26,7 +31,7 @@
             />
           </label>
         </form>
-        <button type="button" class="page-header__search-btn"></button>
+        <button type="button" class="page-header__search-btn" tabindex="0"></button>
 
         <div class="page-header__nav">
           <nav class="main-nav">
@@ -61,10 +66,12 @@
       </header>
       <main class="page-main">
         <section class="info">
+
           <div class="info__poster">
             <div class="info__poster-img"></div>
-            <a href="#" class="info__trailer"><i></i> Посмотреть трейлер</a>
+            <a data-fancybox href="https://www.youtube.com/watch?v=84a2VD68hJU" class="info__trailer"><i></i> Посмотреть трейлер</a>
           </div>
+
           <div class="info__container">
             <h2 class="info__title">
               Охотники за привидениями: Наследники
@@ -219,31 +226,37 @@
       </main>
       <section class="news">
         <h2 class="news__title">Новости по теме</h2>
-        <div class="new__wrapper">
-          <button class="new__btn" type="button"></button>
-          <ul class="news__list">
-          <li class="news__item">
-            <p class="news__date">31 марта 2020</p>
-            <a href="#" class="news__link">«Морбиуса» и «Охотников за привидениями» перенесли на следующий
-              год</a>
-          </li>
-          <li class="news__item">
-            <p class="news__date">9 декабря 2019</p>
-            <a href="#" class="news__link">Наследники: Вышел дебютный трейлер новых «Охотников за
-              привидениями»</a>
-          </li>
-          <li class="news__item">
-            <p class="news__date">11 ноября 2019</p>
-            <a href="#" class="news__link">Новые «Охотники за привидениями» обзавелись названием</a>
-          </li>
-          <li class="news__item">
-            <p class="news__date">19 октября 2019</p>
-            <a href="#" class="news__link">Завершились съёмки новых «Охотников за привидениями»</a>
-          </li>
-        </ul>
-      </div>
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide news__item">
+              <p class="news__date">31 марта 2020</p>
+              <a href="#" class="news__link">«Морбиуса» и «Охотников за привидениями»     перенесли на следующий
+                год</a>
+            </div>
+            <div class="swiper-slide news__item">
+              <p class="news__date">9 декабря 2019</p>
+              <a href="#" class="news__link">Наследники: Вышел дебютный трейлер новых     «Охотников за
+                привидениями»</a>
+            </div>
+            <div class="swiper-slide news__item">
+              <p class="news__date">11 ноября 2019</p>
+              <a href="#" class="news__link">Новые «Охотники за привидениями» обзавелись     названием</a>
+            </div>
+            <div class="swiper-slide news__item">
+              <p class="news__date">19 октября 2019</p>
+              <a href="#" class="news__link">Завершились съёмки новых «Охотников за     привидениями»</a>
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="new__btn-prev"></div>
+          <div class="new__btn-next"></div>
+        </div>
       </section>
     </div>
+    <script src="js/swiper/swiper.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

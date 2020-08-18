@@ -73,15 +73,6 @@
   align-items: center;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
-
   & i {
     width: 25px;
     height: 25px;
