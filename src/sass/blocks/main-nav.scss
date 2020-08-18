@@ -38,6 +38,13 @@
       display: none;
     }
   }
+
+  @include media-desktop() {
+    justify-content: flex-start;
+    @include indent();
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 .main-nav__item {
@@ -69,8 +76,8 @@
 }
 
 .main-nav__link--service {
-  @include media-tablet() {
-    padding-right: 2em;
+  @include media-desktop() {
+    padding-right: 2.2em;
   }
 }
 

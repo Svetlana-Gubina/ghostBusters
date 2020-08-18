@@ -6,14 +6,18 @@
 
   const toggle = document.querySelector(".main-nav__toggle");
   const menu = document.querySelector(".page-header__nav");
+  const form = document.querySelector(".page-header__search-form");
+  const searchBtn = document.querySelector(".page-header__search-btn");
 
   const handleBreackpointChange = (event) => {
     if (event.matches) {
       menu.classList.add("visually-hidden");
       toggle.classList.remove("visually-hidden");
+      form.classList.add("modal");
     } else {
       menu.classList.remove("visually-hidden");
       toggle.classList.add("visually-hidden");
+      form.classList.remove("modal");
     }
   };
 
@@ -27,5 +31,10 @@
     evt.preventDefault();
     this.classList.toggle("main-nav__toggle-close");
     menu.classList.toggle("visually-hidden");
+  });
+
+  searchBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    form.classList.toggle("modal-show");
   });
 })();
