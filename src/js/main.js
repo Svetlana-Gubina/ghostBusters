@@ -25,8 +25,8 @@
 
         // Navigation arrows
         navigation: {
-          nextEl: ".new__btn-next",
-          prevEl: ".new__btn-prev",
+          nextEl: ".news__btn-next",
+          prevEl: ".news__btn-prev",
         },
       });
     } else {

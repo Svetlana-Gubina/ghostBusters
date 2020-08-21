@@ -31,76 +31,56 @@
   }
 }
 
-.new__wrapper {
-  position: relative;
-  @include indent();
-  width: 350px;
-  max-width: 100%;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 100%;
-    background: #f3f3f3;
-  }
-
-  @include media-tablet {
-    width: 100%;
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
-.new__btn-prev,
-.new__btn-next {
+.news__btn-prev,
+.news__btn-next {
   position: absolute;
   z-index: 10;
   width: 25px;
   height: 21.72px;
   border: none;
   box-shadow: 0 none;
-  background-color: purple;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  top: 47%;
+  cursor: pointer;
 
   @include media-tablet {
     display: none;
   }
 }
 
-.new__btn-prev {
+.news__btn-prev {
   left: 15px;
-  top: 47%;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='22' viewBox='0 0 25 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.20612 9.99463H23.9946C24.5499 9.99463 25 10.445 25 11C25 11.555 24.5499 12.0054 23.9946 12.0054H1.20612C0.65084 12.0054 0.200736 11.5553 0.200736 11C0.200736 10.4447 0.650791 9.99463 1.20612 9.99463Z' fill='black'/%3E%3Cpath d='M0.294643 10.2889L10.147 0.436173C10.5398 0.0437365 11.1758 0.0437365 11.5686 0.436173C11.9614 0.828952 11.9614 1.46568 11.5686 1.85812L2.42704 11L11.5686 20.1419C11.9614 20.5343 11.9614 21.1711 11.5686 21.5635C11.3722 21.7599 11.1152 21.8581 10.8578 21.8581C10.6004 21.8581 10.3434 21.7599 10.147 21.5635L0.294643 11.7108C-0.098136 11.3181 -0.098136 10.6813 0.294643 10.2889Z' fill='black'/%3E%3C/svg%3E%0A");
 }
 
-.new__btn-next {
+.news__btn-next {
   right: 15px;
-  top: 47%;
-  background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='22' viewBox='0 0 25 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.7939 9.99463H1.00538C0.450104 9.99463 0 10.445 0 11C0 11.555 0.450055 12.0054 1.00538 12.0054H23.7939C24.3492 12.0054 24.7993 11.5553 24.7993 11C24.7993 10.4447 24.3492 9.99463 23.7939 9.99463Z' fill='black'/%3E%3Cpath d='M24.7054 10.2889L14.853 0.436173C14.4602 0.0437365 13.8242 0.0437365 13.4314 0.436173C13.0386 0.828952 13.0386 1.46568 13.4314 1.85812L22.573 11L13.4314 20.1419C13.0386 20.5343 13.0386 21.1711 13.4314 21.5635C13.6278 21.7599 13.8848 21.8581 14.1422 21.8581C14.3996 21.8581 14.6566 21.7599 14.853 21.5635L24.7054 11.7108C25.0981 11.3181 25.0981 10.6813 24.7054 10.2889Z' fill='black'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
 }
 
-.swiper-wrapper {
+.swiper-container {
+  @include media-tablet {
+    @include indent();
+  }
+}
+
+.news__wrapper {
   @include media-tablet {
     width: 100%;
     @include indent();
     @include flex();
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .news__item {
   @include indent();
-  padding: 30px;
-  padding-right: calc(80px + 0.2%);
-  padding-left: 80px;
+  padding: 30px 80px;
 
-  max-width: 350px;
+  max-width: 100%;
+  min-height: 170px;
   background-color: #ffffff;
 
   @include media-tablet {
