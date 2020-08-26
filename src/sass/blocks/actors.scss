@@ -13,28 +13,6 @@
   }
 }
 
-.actors__title {
-  @include indent();
-  margin-bottom: 30px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 21px;
-
-  & span {
-    color: #a5a5a5;
-    padding-left: 1em;
-  }
-
-  @include media-desktop() {
-    font-size: 24px;
-    line-height: 28px;
-    @include indent();
-    padding: 0.2em 0;
-    margin-bottom: 50px;
-  }
-}
-
 .actors__list {
   @include indent();
   @include list();
@@ -107,6 +85,7 @@
 
 .actors__img img {
   object-fit: cover;
+  border-radius: 50%;
 
   @include media-tablet() {
     width: 100%;
@@ -123,4 +102,49 @@
   & .actors__name--eng {
     color: $grey-color;
   }
+}
+
+// TABS
+
+.actors__tabs-container,
+.actors__tabs-block {
+  @include indent();
+}
+
+.actors__tabs-list {
+  @include indent();
+  @include list();
+  @include flex();
+}
+
+.actors__tabs-item {
+  @include indent();
+}
+
+.actors__tabs-link {
+  @include indent();
+  display: block;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: $grey-color;
+  text-decoration: none;
+
+  @include media-desktop() {
+    font-size: 24px;
+    line-height: 28px;
+    @include indent();
+    padding: 0.2em 0;
+    margin-bottom: 50px;
+  }
+}
+
+.actors__tabs-link--actors {
+  padding-right: 1em;
+}
+
+.ui-tabs-active a {
+  color: $dark-color;
 }

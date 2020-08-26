@@ -53,3 +53,7 @@
     form.classList.toggle("modal-show");
   });
 })();
+
+$("#tabs").tabs({
+  active: 1,
+});
